@@ -1,7 +1,7 @@
+streamlit
+prophet
+xgboost
+matplotlib
 pandas
 numpy
-matplotlib
-streamlit
 scikit-learn
-xgboost
-prophet
