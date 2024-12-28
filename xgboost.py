@@ -1,6 +1,6 @@
 import pandas as pd
 from prophet import Prophet
-import xgboost as xgb
+from xgboost import XGBRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import numpy as np
@@ -67,7 +67,7 @@ y = data['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Treinar o modelo XGBoost
-model_xgb = xgb.XGBRegressor(
+model_xgb = XGBRegressor(
     objective='reg:squarederror',
     n_estimators=200,
     learning_rate=0.05,
