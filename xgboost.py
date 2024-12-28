@@ -1,7 +1,6 @@
 import pandas as pd
 from prophet import Prophet
-import xgboost 
-# as xgb
+import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import numpy as np
