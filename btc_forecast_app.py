@@ -2,7 +2,7 @@ import pandas as pd
 from prophet import Prophet
 from xgboost import XGBRegressor
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -109,7 +109,7 @@ st.pyplot(fig)
 
 # Avaliar o modelo XGBoost no conjunto de teste
 y_pred_xgb = model_xgb.predict(X_test)
-from sklearn.metrics import mean_squared_error, mean_absolute_error
+
 rmse_xgb = mean_squared_error(y_test, y_pred_xgb, squared=True) ** 0.5
-#rmse_xgb = mean_squared_error(y_test, y_pred_xgb, squared=False)
+
 st.sidebar.write(f"RMSE do XGBoost no conjunto de teste: {rmse_xgb}")
