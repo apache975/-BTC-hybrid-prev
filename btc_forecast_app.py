@@ -110,6 +110,5 @@ st.pyplot(fig)
 # Avaliar o modelo XGBoost no conjunto de teste
 y_pred_xgb = model_xgb.predict(X_test)
 
-rmse_xgb = mean_squared_error(y_test, y_pred_xgb, squared=True) ** 0.5
-
+rmse_xgb = mean_squared_error(y_test, y_pred_xgb) ** 0.5
 st.sidebar.write(f"RMSE do XGBoost no conjunto de teste: {rmse_xgb}")
